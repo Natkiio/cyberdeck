@@ -26,3 +26,13 @@ export function rollDice(count: number, side: number): number[] { // returns an 
 // testing the functions
 console.log(rollDie(20));
 console.log(rollDice(3,6)); 
+
+export function sumRolls(rolls: number[]): number {
+    let total = 0;
+    for (const roll of rolls) {
+        total += roll;
+    }
+    return total;
+}
+
+console.log(sumRolls([4,5,5]))
