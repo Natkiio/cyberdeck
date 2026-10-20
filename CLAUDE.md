@@ -1,4 +1,4 @@
-# Cyberdeck
+# Cybrdek
 
 A terminal-styled character sheet and rules reference for a cyberpunk tabletop game.
 It runs as a website and an installable PWA (desktop and mobile). The game system is **Cyberpunk RED**

@@ -15,12 +15,12 @@
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
-	<title>CYBERDECK</title>
+	<title>CYBRDEK</title>
 </svelte:head>
 
 <div class="shell">
 	<nav>
-		<span class="brand">CYBERDECK://</span>
+		<span class="brand">CYBRDEK://</span>
 		{#each nav as item (item.href)}
 			<a href={item.href} class:active={page.url.pathname === item.href}>{item.label}</a>
 		{/each}

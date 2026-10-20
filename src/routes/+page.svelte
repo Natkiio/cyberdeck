@@ -10,7 +10,7 @@
 	];
 </script>
 
-<h1>CYBERDECK OS</h1>
+<h1>CYBRDEK OS</h1>
 
 <Panel title="BOOT">
 	{#each bootLines as line, i (i)}
