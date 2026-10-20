@@ -1,5 +1,12 @@
 // Take a 2d6 + 3 and return each die rolled plus the total 
 
+export interface RollResult {
+    rolls: number[];
+    modifier: number;
+    total: number;
+
+} 
+
 // Roll one die with a given number of sides
 
 //need export - otherwise rollDie not availible in other files 
@@ -23,9 +30,7 @@ export function rollDice(count: number, side: number): number[] { // returns an 
    return rolls; //give the data in rolls back to the user when called. 
 }
 
-// testing the functions
-console.log(rollDie(20));
-console.log(rollDice(3,6)); 
+
 
 export function sumRolls(rolls: number[]): number {
     let total = 0;
@@ -35,4 +40,33 @@ export function sumRolls(rolls: number[]): number {
     return total;
 }
 
+export function roll(count: number, side: number, modifier: number): RollResult {
+    const rolls = rollDice(count, side);
+    const total = sumRolls(rolls) + modifier; 
+    return { rolls: rolls, modifier: modifier, total: total };
+}
+
+export function skillCheck(modifier: number): RollResult {
+    const first = rollDie(10);
+    const rolls = [first];
+    let total = first + modifier;
+
+    if (first === 10) {
+        const extra = rollDie(10);
+        rolls.push(extra);
+        total += extra;
+    } else if (first === 1) {
+        const extra = rollDie(10);
+        rolls.push(extra);
+        total -= extra;
+    }
+
+    return { rolls, modifier, total };
+}
+
+// testing the functions
+console.log(rollDie(20));
+console.log(rollDice(3,6)); 
 console.log(sumRolls([4,5,5]))
+console.log(roll(1, 10, 14));
+console.log(roll(2, 6, 0));

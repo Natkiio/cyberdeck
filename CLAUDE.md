@@ -1,8 +1,8 @@
 # Cyberdeck
 
 A terminal-styled character sheet and rules reference for a cyberpunk tabletop game.
-It runs as a website and an installable PWA (desktop and mobile). The system is undecided:
-**Carbon 2185** (5e-based) or **Cyberpunk RED**, so the app must stay ruleset-agnostic.
+It runs as a website and an installable PWA (desktop and mobile). The game system is **Cyberpunk RED**
+(chosen 2026-10-19). Keep the ruleset layer pluggable so another system could be added later.
 
 The owner is learning Svelte and writes parts of this by hand. Explain non-obvious Svelte
 patterns briefly when you introduce them.
